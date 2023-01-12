@@ -1,31 +1,23 @@
 package pl.javastart.task;
 
 public class Televisor {
-    private String onOrOff;
+    private boolean isOn;
 
-    public Televisor(String onOrOff) {
-        this.onOrOff = onOrOff;
+    public Televisor(boolean isOn) {
+        this.isOn = isOn;
     }
 
     void turnOn() {
-        System.out.println("Wlaczam telewizor");
-        onOrOff = "Wlaczony";
+        System.out.println("Wlaczam TV");
+        isOn = true;
     }
 
     void turnOff() {
-        System.out.println("Wylaczam telewizor");
-        onOrOff = "Wylaczony";
+        System.out.println("Wylaczam TV");
+        isOn = false;
     }
 
     void showStatus() {
-        System.out.println("Telewizor jest " + onOrOff);
-    }
-
-    public String getOnOrOff() {
-        return onOrOff;
-    }
-
-    public void setOnOrOff(String onOrOff) {
-        this.onOrOff = onOrOff;
+        System.out.println("Czy TV jest wlaczony? " + isOn);
     }
 }
